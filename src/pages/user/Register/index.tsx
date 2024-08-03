@@ -52,8 +52,8 @@ const Register: React.FC = () => {
             }
           }}
           logo={<img alt="logo" src={SYSTEM_LOGO}/>}
-          title="编程导航知识星球"
-          subTitle={<a href={PLANET_LINK} target="_blank" rel="noreferrer">最好的编程学习知识圈子</a>}
+          title="哈深用户中心"
+          subTitle={<a href={PLANET_LINK} target="_blank" rel="noreferrer">给哈深学子的平台</a>}
           initialValues={{
             autoLogin: true,
           }}
@@ -118,20 +118,20 @@ const Register: React.FC = () => {
                   },
                 ]}
               />
-              <ProFormText
-                name="planetCode"
-                fieldProps={{
-                  size: 'large',
-                  prefix: <UserOutlined className={styles.prefixIcon}/>,
-                }}
-                placeholder="请输入星球编号"
-                rules={[
-                  {
-                    required: true,
-                    message: '星球编号是必填项！',
-                  },
-                ]}
-              />
+              {/*<ProFormText*/}
+              {/*  name="planetCode"*/}
+              {/*  fieldProps={{*/}
+              {/*    size: 'large',*/}
+              {/*    prefix: <UserOutlined className={styles.prefixIcon}/>,*/}
+              {/*  }}*/}
+              {/*  placeholder="请输入星球编号"*/}
+              {/*  rules={[*/}
+              {/*    {*/}
+              {/*      required: true,*/}
+              {/*      message: '星球编号是必填项！',*/}
+              {/*    },*/}
+              {/*  ]}*/}
+              {/*/>*/}
             </>
           )}
         </LoginForm>
