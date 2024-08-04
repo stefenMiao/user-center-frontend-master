@@ -8,6 +8,7 @@ import {currentUser as queryCurrentUser} from './services/ant-design-pro/api';
 import {BookOutlined, LinkOutlined} from '@ant-design/icons';
 import defaultSettings from '../config/defaultSettings';
 import {RequestConfig} from "@@/plugin-request/request";
+import {message} from "antd";
 
 const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/user/login';
@@ -76,6 +77,8 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
       }
       // 如果没有登录，重定向到 login
       if (!initialState?.currentUser) {
+        const defaultLoginErrMessage = 'shibai！';
+        message.success(defaultLoginErrMessage);
         history.push(loginPath);
       }
     },
